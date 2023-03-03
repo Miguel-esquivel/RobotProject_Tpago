@@ -10,6 +10,7 @@ Library             SeleniumLibrary
 ${url}=             https://temp.bancard.com.py:9443/                             #URL Pagina de inicio
 ${url1}=            https://temp.bancard.com.py:9443/users/new                    #URL de Registro de usuario
 ${url2}=            https://desa.infonet.com.py:8092/auth/users/forgot-password   #URL de Reseteo de contraseña
+${url3}=            https://temp.bancard.com.py:9443/sessions/new                 #URL Inicio de sesion
 ${navegador}=       chrome
 
 *** Keywords ***
@@ -26,6 +27,11 @@ Pagina de reseteo
     Open Browser                         ${url2}     ${navegador}
     Maximize browser window
     #Title should be                      Bancard, Portal de Autenticación
+
+Pagina de logeo
+    Open Browser                         ${url3}     ${navegador}
+    Maximize browser window
+    Title should be                      Tpago
 
 # Validacion de registro de usuario
 
@@ -80,3 +86,19 @@ Reseteo exitoso
     [Arguments]                     ${mensagem_esperada}
     ${mensagem}=                    Get webElement           //div[contains(text(),'Se te envió un mail a tu cuenta para actualizar tu')]
     Should Contain                  ${mensagem.text}         ${mensagem_esperada}
+
+ # Validacion el inicio de sesion
+
+Credenciales inválidas
+    [Arguments]                     ${mensagem_esperada}
+    ${mensagem}=                    Get webElement           //div[contains(text(),'No existe un usuario con el email ingresado')]
+    Should Contain                  ${mensagem.text}         ${mensagem_esperada}
+
+Usuario no activo
+    [Arguments]                     ${mensagem_esperada}
+    ${mensagem}=                    Get webElement           //div[contains(text(),'El usuario ingresado aun no ha sido activado')]
+    Should Contain                  ${mensagem.text}         ${mensagem_esperada}
+
+Pagina Secreta
+    [Arguments]                     ${full_name}
+    Page Should Contain            ¡Hola ${full_name}!
