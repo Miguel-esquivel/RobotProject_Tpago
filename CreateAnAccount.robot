@@ -3,9 +3,6 @@
 
 *** Setting ***
 
-Library             SeleniumLibrary
-Documentation       Funcionalidad del formulario de registro
-
 Documentation        Funcionalidad de la pagina de Registro de usuario
 Library              SeleniumLibrary
 Resource             ./Resource/Base.robot
