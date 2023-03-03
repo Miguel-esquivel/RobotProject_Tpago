@@ -48,7 +48,7 @@ Test004 - Ingreso de usuario no activado
          Input text                    id=email                                 miguel.esquivel@bancard.com.py
          Input text                    id=password                              Termito.8446
          Click Button                  name=commit
-         Pagina Secreta                Miguel
+         Secreta                Miguel
          Capture Page Screenshot
          Close Browser
 

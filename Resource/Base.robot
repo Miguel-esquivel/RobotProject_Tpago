@@ -99,6 +99,19 @@ Usuario no activo
     ${mensagem}=                    Get webElement           //div[contains(text(),'El usuario ingresado aun no ha sido activado')]
     Should Contain                  ${mensagem.text}         ${mensagem_esperada}
 
-Pagina Secreta
+Secreta
     [Arguments]                     ${full_name}
     Page Should Contain            ¡Hola ${full_name}!
+
+# Validacion de tarjetas
+
+Mensaje - No pudimos agregar tu tarjeta
+    [Arguments]                     ${mensagem_esperada}
+    ${mensagem}=                    Get webElement           //div[@class='text-lg mr-2 font-bold text-center'][contains(.,'No pudimos agregar')]
+    Should Contain                  ${mensagem.text}         ${mensagem_esperada}
+
+Mensaje - Agregar tu tarjeta
+    [Arguments]                     ${mensagem_esperada}
+    ${mensagem}=                    Get webElement           //div[@class='text-lg mr-2 font-bold text-center'][contains(.,'¡Agregamos')]
+    Should Contain                  ${mensagem.text}         ${mensagem_esperada}
+
