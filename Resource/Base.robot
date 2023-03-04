@@ -11,6 +11,7 @@ ${url}=             https://temp.bancard.com.py:9443/                           
 ${url1}=            https://temp.bancard.com.py:9443/users/new                    #URL de Registro de usuario
 ${url2}=            https://desa.infonet.com.py:8092/auth/users/forgot-password   #URL de Reseteo de contraseña
 ${url3}=            https://temp.bancard.com.py:9443/sessions/new                 #URL Inicio de sesion
+${url4}=             https://desa.infonet.com.py:8035/sessions/new?redirect_to=https%3A%2F%2Fdesa.infonet.com.py%3A8035%2Ftpago    #URL Portal de comercios
 ${navegador}=       chrome
 
 *** Keywords ***
@@ -32,6 +33,11 @@ Pagina de logeo
     Open Browser                         ${url3}     ${navegador}
     Maximize browser window
     Title should be                      Tpago
+
+Pagina del Portal de comercio
+    Open Browser                         ${url4}     ${navegador}
+    Maximize browser window
+    title should be                      Bancard, Portal de Comercios
 
 # Validacion de registro de usuario
 
