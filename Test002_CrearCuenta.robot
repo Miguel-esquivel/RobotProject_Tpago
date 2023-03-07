@@ -11,7 +11,7 @@ Resource             ./Resource/Base.robot
 
 Test002 - Ingreso a la pagina de registro
 
-        [Tags]                        002 - Ingreso a la pagina de registro
+        [Tags]                        Test002 - Ingreso a la pagina de registro
         Pagina de inicio
         Click Element                 //a[contains(text(),'CREAR UNA CUENTA NUEVA')]
         Sleep                         1

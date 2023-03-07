@@ -41,14 +41,14 @@ Test004 - Ingreso de usuario no activado
          Capture Page Screenshot
          Close Browser
 
-Test004 - Ingreso de usuario no activado
+Test004 - Ingreso de usuario exitoso
 
-         [Tags]                        Test004 - Ingreso de usuario no activado
+         [Tags]                        Test004 - Ingreso de usuario exitoso
          Pagina de logeo
          Input text                    id=email                                 miguel.esquivel@bancard.com.py
          Input text                    id=password                              Termito.8446
          Click Button                  name=commit
-         Secreta                Miguel
+         Secreta                       Miguel
          Capture Page Screenshot
          Close Browser
 

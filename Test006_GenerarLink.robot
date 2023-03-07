@@ -11,7 +11,7 @@ Resource              ./Resource/Base.robot
 
 Test006 - Generamos limk desde Portal de comercios
 
-        [Tags]    Test uno
+        [Tags]                     Test006 - Generamos limk desde Portal de comercios
         Pagina del Portal de comercio
         input text                 id=email     carlos.villalba@bancard.com.py
         input text                 id=password  bancard2022

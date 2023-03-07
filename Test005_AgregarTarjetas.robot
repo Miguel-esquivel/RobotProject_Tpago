@@ -32,6 +32,7 @@ Test005 - Catastro de tarjeta vencida
                Sleep                         3
                Mensaje - No pudimos agregar tu tarjeta        No pudimos agregar
                Capture Page Screenshot
+               Close browser
 
 Test005 - Catastro de tarjeta VISA
 
@@ -57,10 +58,11 @@ Test005 - Catastro de tarjeta VISA
                Sleep                         1
                Mensaje - Agregar tu tarjeta         ¡Agregamos
                Capture Page Screenshot
+               Close browser
 
 Test005 - Catastro de tarjeta AMEX
 
-               [Tags]                        020 - Catastro de tarjeta AMEX
+               [Tags]                        Test005 - Catastro de tarjeta AMEX
                Pagina de inicio
                Click Element                 //a[contains(text(),'INICIAR SESIÓN')]
                Sleep                         1
@@ -82,3 +84,4 @@ Test005 - Catastro de tarjeta AMEX
                Sleep                         1
                Mensaje - Agregar tu tarjeta         ¡Agregamos
                Capture Page Screenshot
+               Close browser
