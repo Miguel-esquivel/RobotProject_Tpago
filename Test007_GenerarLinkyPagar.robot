@@ -31,6 +31,11 @@ Test006 - Generamos limk desde Portal de comercios
         execute javascript         window.scrollTo(0,300)
         click button               //*[@id="payment-link"]/div/div/div/div[2]/div/div[3]/button
         sleep   2
+        ${link}=                       Get Value              id=payment-link-url
+        Execute javascript             window.scrollTo(0,500)
+        sleep                          2
+        open browser                   ${link}               chrome
+        sleep   2
         Capture Page Screenshot
         Close Browser
 

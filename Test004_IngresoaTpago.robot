@@ -1,5 +1,4 @@
 # DOCUMENTACION: Automatizacion de pruebas para la aplicacion web de Tpago empresa BANCARD S.A.
-# TESTER: Miguel Angel Esquivel Rios
 
 *** Settings ***
 Documentation       Funcionalidad del inicio de sesion
@@ -8,9 +7,9 @@ Resource            ./Resource/Base.robot
 
 *** Test Cases ***
 
-Test004 - Pantalla de inicio de sesion
+Test004 - Visualizar pantalla de inicio de sesion
 
-         [Tags]                        Test004 - Pantalla de inicio de sesion
+         [Tags]                        Test004 - Visualizar pantalla de inicio de sesion
          Pagina de inicio
          Click Element                 //a[contains(text(),'INICIAR SESIÓN')]
          Sleep                         1
@@ -19,9 +18,9 @@ Test004 - Pantalla de inicio de sesion
          Capture Page Screenshot
          Close Browser
 
-Test004 - Ingreso de usuario no valido
+Test004 - Usuario no valido
 
-         [Tags]                        Test004 - Ingreso de usuario no valido
+         [Tags]                        Test004 - Usuario no valido
          Pagina de logeo
          Input text                    id=email                                 valenzuela@bancard.com.py
          Input text                    id=password                              Hola1234567
@@ -30,9 +29,9 @@ Test004 - Ingreso de usuario no valido
          Capture Page Screenshot
          Close Browser
 
-Test004 - Ingreso de usuario no activado
+Test004 - Usuario no activado
 
-         [Tags]                        Test004 - Ingreso de usuario no activado
+         [Tags]                        Test004 - Usuario no activado
          Pagina de logeo
          Input text                    id=email                                 miguelesquivel170@gmail.com
          Input text                    id=password                              Termito.8446
@@ -41,9 +40,9 @@ Test004 - Ingreso de usuario no activado
          Capture Page Screenshot
          Close Browser
 
-Test004 - Ingreso de usuario exitoso
+Test004 - Ingreso exitoso
 
-         [Tags]                        Test004 - Ingreso de usuario exitoso
+         [Tags]                        Test004 - Ingreso exitoso
          Pagina de logeo
          Input text                    id=email                                 miguel.esquivel@bancard.com.py
          Input text                    id=password                              Termito.8446

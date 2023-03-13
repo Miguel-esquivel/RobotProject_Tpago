@@ -4,7 +4,7 @@
 *** Settings ***
 
 Library             SeleniumLibrary
-
+Library             SeleniumLibrary
 *** Variables ***
 
 ${url}=             https://temp.bancard.com.py:9443/                             #URL Pagina de inicio
